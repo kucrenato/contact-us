@@ -1,53 +1,45 @@
-<!doctype html>
-<!--[if lte IE 9]>
-<html lang="en" class="oldie">
-<![endif]-->
-<!--[if gt IE 9]><!-->
-<html lang="en">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us Form</title>
-  <link rel="stylesheet" media="all" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Netlify</title>
 </head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+    form {
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    input, textarea{
+        width: 100%;
+        padding: 10px;
+        display: block;
+    }
+    input[type="submit"]{
+        font-size: 20px;
+    }
+</style>
 <body>
-<div class="container">
-	<div class="row">
-			<h1>contact us</h1>
-	</div>
-	<div class="row">
-			<h4 style="text-align:center">We'd love to hear from you!</h4>
-	</div>
-	<div class="row input-container">
-			<div class="col-xs-12">
-				<div class="styled-input wide">
-					<input type="text" required />
-					<label>Name</label> 
-				</div>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<div class="styled-input">
-					<input type="text" required />
-					<label>Email</label> 
-				</div>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<div class="styled-input" style="float:right;">
-					<input type="text" required />
-					<label>Phone Number</label> 
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="styled-input wide">
-					<textarea required></textarea>
-					<label>Message</label>
-				</div>
-			</div>
-			<div class="col-xs-12">
-				<div class="btn-lrg submit-btn">Send Message</div>
-			</div>
-	</div>
-</div>
+    <form method="post" autocomplete="off">
+        <label>Nombre</label>
+        <input type="text" placeholder="Escribe tu nombre">
+
+        <label>Email</label>
+        <input type="text" placeholder="Escribe tu email">
+
+        <label>Mensaje</label>
+        <input type="text" placeholder="Escribe tu mensaje">
+
+        <input type="submit" placeholder="Enviar">
+    </form>
 </body>
 </html>
