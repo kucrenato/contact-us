@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,33 @@
     <title>Formulario para Netlify</title>
 </head>
 <style>
-    *{
+    * {
         box-sizing: border-box;
     }
-    body{
+
+    body {
         font-family: sans-serif;
         font-size: 20px;
     }
+
     form {
         width: 400px;
         margin: 0 auto;
         margin-top: 50px;
     }
-    input, textarea{
+
+    input,
+    textarea {
         width: 100%;
         padding: 10px;
         display: block;
     }
-    input[type="submit"]{
+
+    input[type="submit"] {
         font-size: 20px;
     }
 </style>
+
 <body>
     <form autocomplete="off" netlify>
         <label>Nombre</label>
@@ -40,9 +47,28 @@
         <input type="text" name="mensaje" placeholder="Escribe tu mensaje">
 
         <label>Archivo</label>
-        <input type="file" name="file" placeholder="Agregar un archivo">
+        <input type="file" name="file" id="myInputFile" placeholder="Agregar un archivo">
 
         <input type="submit" placeholder="Enviar">
     </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtener el elemento input file
+            var fileInput = document.getElementById('myInputFile');
+
+            // Agregar un evento 'change' al input file
+            fileInput.addEventListener('change', function (event) {
+                // Obtener el archivo seleccionado
+                var file = event.target.files[0];
+
+                // Realizar una acción, como mostrar el nombre del archivo
+                if (file) {
+                    console.log("Archivo seleccionado: " + file.name);
+                } else {
+                    console.log("No se ha seleccionado ningún archivo.");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
